@@ -3,9 +3,9 @@
 
 (include_subdirs unqualified)
 
-(executable
+(library
   (public_name goblint)
-  (modes native js) ; https://dune.readthedocs.io/en/stable/dune-files.html#linking-modes
+  (modes native) ; https://dune.readthedocs.io/en/stable/dune-files.html#linking-modes
   (modules :standard \ apronDomain poly)
   (libraries goblint-cil.all-features batteries xml-light zarith_stubs_js)
   (preprocess (staged_pps ppx_import ppx_deriving.std ppx_deriving_yojson ppx_distr_guards ocaml-monadic))
